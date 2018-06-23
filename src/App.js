@@ -48,7 +48,7 @@ class App extends Component {
     
     return (
       <div className="App">
-        <h1 >Playlist Manager</h1>
+        <h1 >Playlist Manager!</h1>
         <Aggregate/>
         <Aggregate/>
         <Filter/>
