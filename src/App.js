@@ -33,9 +33,9 @@ class Filter extends Component {
 class Playlist extends Component {
   render() {
     return (
-      <div style={{...defaultStyle, width:"25%"}}>
+      <div style={{...defaultStyle, width:"25%", display:'inline-block'}}>
         <img/>
-        <h3>Playlist name</h3>
+        <h3 style={{'text-align':'left'}}> Playlist name</h3>
         <ul><li>Song 1</li><li>Song 2</li><li>Song 3</li></ul>
 
       </div>
@@ -52,6 +52,8 @@ class App extends Component {
         <Aggregate/>
         <Aggregate/>
         <Filter/>
+        <Playlist/>
+        <Playlist/>
         <Playlist/>
       </div>
     );
