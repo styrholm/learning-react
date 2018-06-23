@@ -7,6 +7,29 @@ let defaultStyle = {
   color : defaultTextColor
 }
 
+let fakeServerData = {
+  user: 'Styrbjörn',
+  playlists: [
+    {
+      name: 'Songs chosen by Styrbjörn',
+      songs: ['Let Yourself Down', 'After Rain', 'Broken']
+    },
+    {
+      name: 'Songs chosen by Marthe',
+      songs: ['Searchlight', 'I am not the only traveller', 'Girl from the sea']
+    },
+    {
+      name: 'Travel songs',
+      songs: ['Crete', 'Home', 'Better with you']
+    },
+    {
+      name: 'Travel songs v2',
+      songs: ['Crete', 'Home', 'Better with you']
+    }
+  ]
+
+}
+
 class Aggregate extends Component {
   render() {
     return (
@@ -44,11 +67,24 @@ class Playlist extends Component {
 }
 
 class App extends Component {
+
+  constructor() {
+    super()
+    this.state = {serverData : {}}
+  }
+
+  componentDidMount() {
+    this.setState({serverData : fakeServerData})
+  }
+
   render() {
     
     return (
       <div className="App">
-        <h1 >Playlist Manager!</h1>
+        <h1>
+          { this.state.serverData.user && 
+            this.state.serverData.user.name}'s playlist          
+        </h1>
         <Aggregate/>
         <Aggregate/>
         <Filter/>
