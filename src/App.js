@@ -9,7 +9,7 @@ let defaultStyle = {
 
 let fakeServerData = {
   user: {
-    name: 'Styrbjörn', 
+    name: 'Styrbjörn Holmberg', 
     playlists: [
       {
         name: 'Songs chosen by Styrbjörn',
